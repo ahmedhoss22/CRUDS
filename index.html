@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+   
+            
+    <div class="crud">
+    <div class="mode">
+        <button id="night" onclick="nightMode()"><i class="fas fa-moon"></i></button>
+        <button id="morning" onclick="lightMode()"><i class="fas fa-sun"></i></button>
+     </div>
+        
+        <div class="head">
+            <h2>cruds</h2>
+            <p>Product manegment System</p>
+            
+        </div>
+
+        <div class="inputs">
+            <input type="text" id="title" placeholder="title" name="inputs">
+                <div class="price">
+                    <input onkeyup="getTotal()" type="number" id="price" placeholder="price" name="inputs" >
+                    <input onkeyup="getTotal()"  type="number" id="taxes" placeholder="taxes" name="inputs">
+                    <input onkeyup="getTotal()" type="number" id="ads" placeholder="ads" name="inputs">
+                    <input onkeyup="getTotal()"  type="number" id="discount" placeholder="discount" name="inputs">
+                    <small onkeyup="getTotal()"  style="margin:10px 0" id="total"></small>
+                </div>
+                <input type="number" id="count" placeholder="count" name="inputs">
+                <input type="text" id="category" placeholder="category" name="inputs">
+                <button id="submit"> Create</button>
+
+                
+        </div> <!-- END-INPUT -->
+
+            <div class="outputs">
+                <div class="searchBlock">
+                    <input type="text" id="search" placeholder="search" onkeyup="searchData(this.value)">
+                    <div class="btnSearch">
+                        <button id="searchTitle" onclick="getSearchMode(this.id)">Search by title</button>
+                        <button id="searchCategory" onclick="getSearchMode(this.id)">Search by category</button>
+                    </div>
+                </div> <!-- END SEARCH BLOCK -->
+
+                <div id="deleteAll"></div>
+                <table>
+                    <tr>
+                        <th>id</th>
+                        <th>title</th>
+                        <th>price</th>
+                        <th>taxes</th>
+                        <th>ads</th>
+                        <th>discount</th>
+                        <th>total</th>
+                        <th>category</th>
+                        <th>update</th>
+                        <th>delete</th>
+                    </tr>
+
+                        <tbody id="table">
+                            
+                        
+                        </tbody>
+                </table>
+            </div> <!-- END-OUTPUT -->
+    </div>  <!-- END CRUD -->
+        <footer>
+          
+            <hr width="100%">
+            <hr width="100%">
+                <img src="images/WhatsApp Image 2022-07-11 at 3.37.11 PM.jpeg" alt="me" height="50px" width="50px">
+                <span style="font-size: 1rem;">Contact us :</span>
+                <a href="https://www.facebook.com/hmo.hossam.1" target="_blank"> <i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/ahmed_h0ssam" target="_blank">  <i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/ahmed-hossam-19a303239/?fbclid=IwAR0ckDCCY5NzcmbEK0KGN_zv1vByRtvoE4V-sjt1lU3sRVukrMPBawJkgXM" target="_blank"> <i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/ahmedhoss22" target="_blank">  <i class="fab fa-github"></i></a>
+        </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
