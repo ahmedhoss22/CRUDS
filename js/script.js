@@ -1,8 +1,8 @@
-// total price                 done
-// create                      done
-// save local strorag          done
-// clear data                  done
-// read                        done
+// total price                 
+// create                      
+// save local strorag          
+// clear data                  
+// read                        
 //count 
 //delet
 //update
