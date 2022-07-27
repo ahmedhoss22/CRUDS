@@ -22,6 +22,11 @@ let submit= document.getElementById('submit');                            // cre
 let title =document.getElementById('title');
 let inputs=document.getElementsByName('inputs')
 let mode="create"
+let body=document.body;
+let input=document.getElementsByTagName('input');
+let button=document.getElementsByTagName('button');
+let mood='dark'
+
 
 function getTotal(){
     if(price.value!=''){
@@ -77,6 +82,13 @@ submit.onclick =()=>{                      // create button
           
    localStorage.setItem('product',JSON.stringify(dataProduct))
    readData();
+   if(mood=='dark'){
+    nightMode()
+   }else{
+    lightMode()
+   }
+
+
 }
 
 function clearData(){
@@ -118,6 +130,11 @@ function readData(){
  }else{
     deleteAll.innerHTML='';
  }
+ if(mood=='dark'){
+    nightMode()
+   }else{
+    lightMode()
+   }
 }
 readData();
 // ///////////////////////////////////////////////////////
@@ -213,4 +230,38 @@ function searchData(value){
     }
     let tableProduct=document.getElementById('table');
     tableProduct.innerHTML=table;
+}
+function nightMode(){
+    mood='dark'
+    body.style.backgroundColor='#222'
+    body.style.color='#fff'
+    for(let i=0;i<input.length;i++){
+        input[i].style.backgroundColor='#111';
+        input[i].style.border='1px solid #CE00FC'
+        input[i].style.color='#fff';
+
+    }
+
+    for(let i=0;i<button.length;i++){
+        button[i].style.backgroundColor='#390053';
+        button[i].style.border='1px solid #CE00FC'
+    }
+}
+
+function lightMode(){
+    mood='light'
+    body.style.backgroundColor='#F1F1F1'
+    body.style.color='black'
+    for(let i=0;i<input.length;i++){
+        input[i].style.backgroundColor='#FDF59C';
+        input[i].style.border='2px solid #FAED55'
+        input[i].style.color='black';
+
+    }
+    total.style.color='#fff'
+    
+    for(let i=0;i<button.length;i++){
+        button[i].style.backgroundColor='#FFC42C';
+        button[i].style.border='2px solid #FCB600'
+    }
 }

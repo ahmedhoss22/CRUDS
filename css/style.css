@@ -11,13 +11,14 @@ body{
 .crud{
     margin: 5vh auto;
     width: 80%;
-
+margin-top: 0;
 }
 .head{
     text-transform: uppercase;
     text-align: center;
-    width: 100%;
-    margin: 10px;
+    width:80%;
+    margin: 10px auto;
+    overflow: hidden;
 }
 input{
     width: 100%;
@@ -36,7 +37,7 @@ input:focus{
     transform: scale(1.1);
 }
 .price input{
-    width: 21%;
+    width: 20%;
 
 }
 #total{
@@ -61,6 +62,7 @@ button{
     color: #fff;
     transition: .5s;
     scroll-behavior: smooth;
+    border: 1px solid #CE00FC;
 }
 button:hover{
     background-color: #51025f;
@@ -92,4 +94,49 @@ td{
 }
 #deleteAll{
     margin: 10px 0;
+}
+
+
+
+
+footer{
+    margin-top: 20vh!important;
+    text-align: center;
+    font-size: 1rem;
+    margin: auto;
+    position: relative;
+    height: 120px;
+    line-height: 100px;
+    width: 100%;
+    overflow: hidden;
+  }
+ 
+  footer a{
+    margin: 2px;
+    line-height: 80px;
+    font-size: 1.25rem;
+  }
+
+  footer img{
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: -30px;
+    display: block;
+    margin-top: 20px;
+    border: 2px solid #51025f;
+  }
+.mode{
+    position: absolute;
+    margin: 5px;    
+    font-size: 1rem;
+
+}
+
+#morning{
+width: 30px;
+
+}
+#night{
+width: 30px;
+
 }
