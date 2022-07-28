@@ -75,8 +75,8 @@ submit.onclick =()=>{                      // create button
                 mode='create';
                 submit.innerHTML='Create';
                 count.style.display='block';
-           }    }
-    clearData();
+           }clearData();    }
+    
    localStorage.setItem('product',JSON.stringify(dataProduct))
    readData();
    if(mood=='dark'){
